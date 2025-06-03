@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+    <link rel="stylesheet" href="../css/estilo_form.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio de práctica #4</h1>
+        <form onsubmit="return false;">
+        <div class="form-group">
+            <label for="tipo">Tipo de cliente (A, B, C u otro):</label>
+            <input type="text" id="tipo" name="tipo" maxlength="1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="discapacidad">¿El cliente es discapacitado?</label>
+            <select id="discapacidad" name="discapacidad">
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+            </select>
+        </div>
+
+        <div class="resultado" id="resultado">
+            <strong>Resultado:</strong><br>Complete el formulario para conocer el descuento final
+        </div>
+
+        <div class="button-group">
+            <button type="button" class="btn-primary" onclick="ejercicio4()">
+            <span>Conocer</span>
+            </button>
+            <button type="reset" class="btn-secondary">
+            <span>Limpiar</span>
+            </button>
+            <button type="submit" class="btn-secondary" onclick="location.href='../menu.html'">
+            <span>Regresar</span>
+            </button>
+        </div>
+        </form>
+    </div>
+
+    <script src="../js/ejercicio4.js"></script>
+</body>
+</html>

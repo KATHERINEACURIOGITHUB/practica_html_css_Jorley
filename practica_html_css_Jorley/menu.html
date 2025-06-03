@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Programación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .card-description {
+            color: #666;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .card:nth-child(1) .card-icon { color: #667eea; }
+        .card:nth-child(2) .card-icon { color: #f093fb; }
+        .card:nth-child(3) .card-icon { color: #4facfe; }
+        .card:nth-child(4) .card-icon { color: #43e97b; }
+        .card:nth-child(5) .card-icon { color: #fa709a; }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicios de Programación</h1>
+        
+        <div class="cards-container">
+            <a href="./pages/edad.html" class="card">
+                <span class="card-icon">🔢</span>
+                <h3 class="card-title">Edad</h3>
+                <p class="card-description">Dada una edad presenta si es mayor o menor de edad</p>
+            </a>
+
+            <a href="./pages/mayor_dos_numeros.html" class="card">
+                <span class="card-icon">📝</span>
+                <h3 class="card-title">Mayor dos Numeros</h3>
+                <p class="card-description">Dados dos numeros presenta el mayor de ellos</p>
+            </a>
+
+            <a href="ejercicio3.html" class="card">
+                <span class="card-icon">🎲</span>
+                <h3 class="card-title">Juego de Adivinanza</h3>
+                <p class="card-description">Crea un juego donde el usuario adivine un número aleatorio</p>
+            </a>
+
+            <a href="ejercicio4.html" class="card">
+                <span class="card-icon">📊</span>
+                <h3 class="card-title">Análisis de Datos</h3>
+                <p class="card-description">Procesa y analiza un conjunto de datos simples</p>
+            </a>
+
+            <a href="ejercicio5.html" class="card">
+                <span class="card-icon">🌡️</span>
+                <h3 class="card-title">Conversor de Temperatura</h3>
+                <p class="card-description">Convierte entre diferentes unidades de temperatura</p>
+            </a>
+
+            <!-- Repetir el bloque 5 veces más; cambiándo el enlace, ícono, título y descripción de la tarjeta para crear los nuevos menús -->
+            <a href="./pages/ejercicio1.html" class="card"> <!-- Enlace -->
+                <span class="card-icon">1️⃣</span> <!-- Ícono -->
+                <h3 class="card-title">Ejercicio de práctica</h3> <!-- Título -->
+                <!-- Descripción --> <p class="card-description">Escribir un algoritmo que lea cuatro números y determine si el numero 1 es la mitad del número 2; Y si el numero 3 es divisor del numero4.</p>
+            </a>
+
+            <a href="./pages/ejercicio2.html" class="card">
+                <span class="card-icon">2️⃣</span>
+                <h3 class="card-title">Ejercicio de práctica</h3>
+                <p class="card-description">Pide al usuario el precio total de una compra en una tienda en línea y el cupón de descuento a aplicar en porcentaje. Si el precio total de la compra supera los $10, aplica el descuento, de lo contrario, no aplica ningún descuento. Calcula y muestra el monto final con el descuento con el IVA del 15%.</p>
+            </a>
+
+            <a href="./pages/ejercicio3.html" class="card">
+                <span class="card-icon">3️⃣</span>
+                <h3 class="card-title">Ejercicio de práctica</h3>
+                <p class="card-description">Pide al usuario el total de su cuenta en un restaurante y el porcentaje de descuento que ofrece por ser cliente frecuente. Si el total de la cuenta supera los $70, aplica el descuento por fidelidad, de lo contrario, no se aplica ningún descuento. Calcula y muestra el monto final con el descuento aplicado más el IVA del 15%.</p>
+            </a>
+
+            <a href="./pages/ejercicio4.html" class="card">
+                <span class="card-icon">4️⃣</span>
+                <h3 class="card-title">Ejercicio de práctica</h3>
+                <p class="card-description">Una tienda en línea "AlgoritmoX", ha decidido ajustar los límites de descuento para diferentes tipos de clientes, con el objetivo de aumentar las ventas. El descuento actual para todos los clientes es de 10%. La política de ajuste de límites de descuento es la siguiente:</p>
+                <ul class="card-description"> <!-- Se utiliza la etiqueta <ul> para crear una lista con viñetas en cada elemento. <ul> significa "unordered list", o en español, "lista desordenada" -->
+                    <li>Si un cliente pertenece al tipo A o es discapacitado, el aumento en el límite de descuento será un 20% sumado al valor que tiene.</li>
+                    <li>Si pertenece al tipo B y no es discapacitado, el aumento será un 15% sumado al valor que tiene.</li>
+                    <li>Para clientes del tipo C, el aumento será un 10% sumado al valor que tiene.</li>
+                    <li>Para cualquier otro tipo de cliente, no habrá aumento de descuento.</li>
+                </ul>
+            </a>
+
+            <a href="./pages/ejercicio5.html" class="card">
+                <span class="card-icon">5️⃣</span>
+                <h3 class="card-title">Ejercicio de práctica</h3>
+                <p class="card-description">Una plataforma de streaming de música llamada "POOX" ha decidido ajustar los descuentos para sus suscriptores premium y usuarios regulares, con el objetivo de fomentar la suscripción premium y aumentar los ingresos. Actualmente, todos los usuarios obtienen un descuento del 0% en la compra de canciones. La política de ajuste de descuentos es la siguiente:</p>
+                <ul class="card-description">
+                    <li>Si un usuario es suscriptor premium y menor de edad, se aplicará un aumento del 15% al descuento actual.</li>
+                    <li>Si el usuario es suscriptor regular o es mayor de edad se aplicará un aumento del 10% al descuento actual.</li>
+                    <li>Para los usuarios que no son suscriptores, no habrá aumento en el descuento.</li>
+                </ul>
+                <p class="card-description">Se necesita desarrollar un algoritmo que, después de ingresar el tipo de usuario (premium o regular), el total de la compra y su edad, aplique el nuevo descuento a la compra realizada, considerando el 12% del IVA. El algoritmo deberá mostrar el tipo de usuario, el total de la compra, el porcentaje de descuento obtenido, el valor del descuento aplicado a la compra, el valor del IVA calculado y el total a pagar</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

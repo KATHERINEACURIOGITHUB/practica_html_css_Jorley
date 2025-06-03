@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio</title>
+    <link rel="stylesheet" href="../css/estilo_form.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio de práctica #5</h1>
+        <form onsubmit="return false;">
+        <div class="form-group">
+            <label for="tipo">Tipo de usuario (premium o regular):</label>
+            <input type="text" id="tipo" name="tipo" placeholder="premium o regular" required />
+        </div>
+
+        <div class="form-group">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required />
+        </div>
+
+        <div class="form-group">
+            <label for="compra">Total de la compra:</label>
+            <input type="number" id="compra" name="compra" step="0.01" required />
+        </div>
+
+        <div class="resultado" id="resultado">
+            <strong>Resultado:</strong><br>Complete el formulario para calcular
+        </div>
+
+        <div class="button-group">
+            <button type="button" class="btn-primary" onclick="ejercicio5()">
+            <span>Calcular</span>
+            </button>
+            <button type="reset" class="btn-secondary">
+            <span>Limpiar</span>
+            </button>
+            <button type="submit" class="btn-secondary" onclick="location.href='../menu.html'">
+            <span>Regresar</span>
+            </button>
+        </div>
+        </form>
+    </div>
+
+    <script src="../js/ejercicio5.js"></script>
+</body>
+</html>

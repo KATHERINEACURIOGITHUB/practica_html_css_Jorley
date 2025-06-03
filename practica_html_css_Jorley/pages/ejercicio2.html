@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+    <link rel="stylesheet" href="../css/estilo_form.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio de práctica #2</h1>
+        <form onsubmit="return false;">
+        <div class="form-group">
+            <label for="precio">Precio total de la compra:</label>
+            <input type="number" id="precio" name="precio" step="0.01" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cupon">Cupón de descuento:</label>
+            <input type="number" id="cupon" name="cupon" step="0.01" required>
+        </div>
+
+        <div class="resultado" id="resultado">
+            <strong>Resultado:</strong><br>Complete el formulario para calcular
+        </div>
+
+        <div class="button-group">
+            <button type="button" class="btn-primary" onclick="ejercicio2()">
+            <span>Calcular</span>
+            </button>
+            <button type="reset" class="btn-secondary">
+            <span>Limpiar</span>
+            </button>
+            <button type="submit" class="btn-secondary" onclick="location.href='../menu.html'">
+            <span>Regresar</span>
+            </button>
+        </div>
+        </form>
+    </div>
+
+    <script src="../js/ejercicio2.js"></script>
+</body>
+</html>
