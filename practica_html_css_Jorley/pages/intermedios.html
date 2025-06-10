@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ejercicios Intermedios</title>
+  
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="../css/estilo_form.css">
+
+  <!-- Estilo visual adicional -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .ejercicio {
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #e0e0e0;
+    }
+
+    h2 {
+      color: #007acc;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007acc;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      padding: 14px;
+      margin-top: 20px; /* Espacio mayor entre botón y resultado */
+      border-left: 5px solid #007acc;
+      white-space: pre-wrap;
+      font-size: 15px;
+      color: #333;
+      border-radius: 4px;
+    }
+
+    .btn-secondary {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 60px; /* Mayor separación del último ejercicio */
+      padding: 15px;
+      background-color: #ff4747;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: #d83535;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>📊 Intermedios (6-10)</h1>
+
+    <!-- Ejercicio 6 -->
+    <div class="ejercicio">
+      <h2>6. Tabla de sumar</h2>
+      <input type="number" id="ex6_x" placeholder="Número base (X)" />
+      <button onclick="ejercicio6()">Mostrar</button>
+      <pre id="res6"></pre>
+    </div>
+
+    <!-- Ejercicio 7 -->
+    <div class="ejercicio">
+      <h2>7. Tabla de multiplicar personalizada</h2>
+      <input type="number" id="ex7_num" placeholder="Número base" />
+      <input type="number" id="ex7_inicio" placeholder="Desde" />
+      <input type="number" id="ex7_fin" placeholder="Hasta" />
+      <button onclick="ejercicio7()">Mostrar</button>
+      <pre id="res7"></pre>
+    </div>
+
+    <!-- Ejercicio 8 -->
+    <div class="ejercicio">
+      <h2>8. Números entre A y B</h2>
+      <input type="number" id="ex8_a" placeholder="Desde A" />
+      <input type="number" id="ex8_b" placeholder="Hasta B" />
+      <button onclick="ejercicio8()">Mostrar</button>
+      <pre id="res8"></pre>
+    </div>
+
+    <!-- Ejercicio 9 -->
+    <div class="ejercicio">
+      <h2>9. Números pares entre A y B</h2>
+      <input type="number" id="ex9_a" placeholder="Desde A" />
+      <input type="number" id="ex9_b" placeholder="Hasta B" />
+      <button onclick="ejercicio9()">Mostrar</button>
+      <pre id="res9"></pre>
+    </div>
+
+    <!-- Ejercicio 10 -->
+    <div class="ejercicio">
+      <h2>10. Suma de pares entre A y B</h2>
+      <input type="number" id="ex10_a" placeholder="Desde A" />
+      <input type="number" id="ex10_b" placeholder="Hasta B" />
+      <button onclick="ejercicio10()">Mostrar</button>
+      <pre id="res10"></pre>
+    </div>
+
+    <!-- Botón de regreso al menú principal -->
+    <a href="../menu.html" class="btn-secondary">⬅️ Regresar al menú principal</a>
+  </div>
+
+  <!-- Script con funciones JS -->
+  <script src="../js/intermedios.js"></script>
+
+</body>
+</html>

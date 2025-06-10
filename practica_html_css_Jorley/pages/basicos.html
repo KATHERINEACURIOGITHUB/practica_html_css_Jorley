@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ejercicios Básicos</title>
+  
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="../css/estilo_form.css">
+
+  <!-- Estilo visual adicional -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .ejercicio {
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #e0e0e0;
+    }
+
+    h2 {
+      color: #007acc;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007acc;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    pre {
+      background-color: #f9f9f9;
+      padding: 14px;
+      margin-top: 20px; /* Espacio mayor entre botón y resultado */
+      border-left: 5px solid #007acc;
+      white-space: pre-wrap;
+      font-size: 15px;
+      color: #333;
+      border-radius: 4px;
+    }
+
+    .btn-secondary {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 60px; /* Mayor separación del último ejercicio */
+      padding: 15px;
+      background-color: #ff4747;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: #d83535;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🚀 Básicos (1-5)</h1>
+
+    <!-- Ejercicio 1 -->
+    <div class="ejercicio">
+      <h2>1. Mensaje N veces</h2>
+      <input type="number" id="ex1_n" placeholder="¿Cuántas veces?" />
+      <input type="text" id="ex1_mensaje" placeholder="¿Qué mensaje?" />
+      <button onclick="ejercicio1()">Mostrar</button>
+      <pre id="res1"></pre>
+    </div>
+
+    <!-- Ejercicio 2 -->
+    <div class="ejercicio">
+      <h2>2. Números del 1 al N</h2>
+      <input type="number" id="ex2_n" placeholder="Hasta qué número" />
+      <button onclick="ejercicio2()">Mostrar</button>
+      <pre id="res2"></pre>
+    </div>
+
+    <!-- Ejercicio 3 -->
+    <div class="ejercicio">
+      <h2>3. Números pares hasta N</h2>
+      <input type="number" id="ex3_n" placeholder="Hasta qué número" />
+      <button onclick="ejercicio3()">Mostrar</button>
+      <pre id="res3"></pre>
+    </div>
+
+    <!-- Ejercicio 4 -->
+    <div class="ejercicio">
+      <h2>4. Múltiplos de 3 hasta N</h2>
+      <input type="number" id="ex4_n" placeholder="Hasta qué número" />
+      <button onclick="ejercicio4()">Mostrar</button>
+      <pre id="res4"></pre>
+    </div>
+
+    <!-- Ejercicio 5 -->
+    <div class="ejercicio">
+      <h2>5. Múltiplos de X hasta N</h2>
+      <input type="number" id="ex5_x" placeholder="Número base (X)" />
+      <input type="number" id="ex5_n" placeholder="Hasta qué número (N)" />
+      <button onclick="ejercicio5()">Mostrar</button>
+      <pre id="res5"></pre>
+    </div>
+
+    <!-- Botón de regreso al menú principal -->
+    <a href="../menu.html" class="btn-secondary">⬅️ Regresar al menú principal</a>
+  </div>
+
+  <!-- Script con funciones JS -->
+  <script src="../js/basicos.js"></script>
+
+</body>
+</html>
