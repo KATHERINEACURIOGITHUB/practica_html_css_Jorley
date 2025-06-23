@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ejercicios</title> <!-- Título de la pestaña -->
+    <link rel="stylesheet" href="../css/estilo_form.css"> <!-- Archivo que contiene los estilos que se usan en la página -->
+    <!-- Estilos adicionales -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        .ejercicio {
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        h2 {
+            color: #007acc;
+        }
+        button {
+            background-color: #007acc;
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #005fa3;
+        }
+        pre {
+            background-color: #f9f9f9;
+            padding: 14px;
+            margin-top: 20px;
+            border-left: 5px solid #007acc;
+            white-space: pre-wrap;
+            font-size: 15px;
+            color: #333;
+            border-radius: 4px;
+        }
+        .btn-secondary {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 60px;
+            padding: 15px;
+            background-color: #ff4747;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #d83535;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tarea de práctica experimental</h1> <!-- Encabezado de la página -->
+
+        <div class="ejercicio">
+          <h2>🧩 EJERCICIOS BÁSICOS DE ARREGLOS (Sin ciclos)</h2>
+          <button onclick="ejerciciosArreglos()">Ejecutar</button> <!-- Botón que llama a la función para mostrar la respuesta del primer conjunto de ejercicios -->
+          <pre id="resArreglos"></pre>
+        </div>
+
+        
+        <div class="ejercicio">
+          <h2>🔤 EJERCICIOS BÁSICOS DE CADENAS (Sin ciclos)</h2>
+          <button onclick="ejerciciosCadenas()">Ejecutar</button> <!-- Botón que llama a la función para mostrar la respuesta del segundo conjunto de ejercicios -->
+          <pre id="resCadenas"></pre>
+        </div>
+
+        
+        <div class="ejercicio">
+          <h2>🔁 EJERCICIOS CON CICLOS (Arreglos y Cadenas)</h2>
+          <button onclick="ejerciciosCiclos()">Ejecutar</button> <!-- Botón que llama a la función para mostrar la respuesta del tercer conjunto de ejercicios -->
+          <pre id="resCiclos"></pre>
+        </div>
+
+        <a href="../menu.html" class="btn-secondary">Regresar</a> <!-- Botón para regresar al menú principal -->
+    </div>
+
+    <script src="../js/tarea_actualizada.js"></script> <!-- Archivo Javascript usado para enlazar las funciones -->
+</body>
+
+</html>
