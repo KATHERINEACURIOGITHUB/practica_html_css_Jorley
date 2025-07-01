@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ejercicios de Condiciones</title>
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="../css/estilo_form.css">
+
+    <!-- Estilos adicionales -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .ejercicio {
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        h2 {
+            color: #007acc;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #007acc;
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        pre {
+            background-color: #f9f9f9;
+            padding: 14px;
+            margin-top: 20px;
+            border-left: 5px solid #007acc;
+            white-space: pre-wrap;
+            font-size: 15px;
+            color: #333;
+            border-radius: 4px;
+            min-height: 80px;
+        }
+
+        .btn-secondary {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 60px;
+            padding: 15px;
+            background-color: #ff4747;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #d83535;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ejercicios Básicos de Condiciones</h1>
+
+        <!-- Ejercicio 1 -->
+        <div class="ejercicio">
+            <h2>1. Clasificación por edad</h2>
+            <input type="number" id="ex1_n" placeholder="Ingrese la edad" />
+            <button onclick="mostrarResultado(ejercicio1, 'res1')">Mostrar</button> <!-- Botón para llamar a la función del ejercicio -->
+            <pre id="res1"></pre> <!-- Identificador (variable) a la que se va a llamar para mostrar el resultado -->
+        </div>
+
+        <!-- Ejercicio 2 -->
+        <div class="ejercicio">
+            <h2>2. Número mayor (entre 4)</h2>
+            <input type="number" id="ex2_1" placeholder="Número 1" />
+            <input type="number" id="ex2_2" placeholder="Número 2" />
+            <input type="number" id="ex2_3" placeholder="Número 3" />
+            <input type="number" id="ex2_4" placeholder="Número 4" />
+            <button onclick="mostrarResultado(ejercicio2, 'res2')">Mostrar</button> <!-- Botón para llamar a la función del ejercicio -->
+            <pre id="res2"></pre> <!-- Identificador (variable) a la que se va a llamar para mostrar el resultado -->
+        </div>
+
+        <!-- Ejercicio 3 -->
+        <div class="ejercicio">
+            <h2>3. Evaluación de nota</h2>
+            <input type="number" id="ex3_n" placeholder="Ingrese la nota" />
+            <button onclick="mostrarResultado(ejercicio3, 'res3')">Mostrar</button> <!-- Botón para llamar a la función del ejercicio -->
+            <pre id="res3"></pre> <!-- Identificador (variable) a la que se va a llamar para mostrar el resultado -->
+        </div>
+
+        <!-- Ejercicio 4 -->
+        <div class="ejercicio">
+            <h2>4. Día de la semana</h2>
+            <input type="text" id="ex4_dia" placeholder="Ingrese el día (ej. lunes)" />
+            <button onclick="mostrarResultado(ejercicio4, 'res4')">Mostrar</button> <!-- Botón para llamar a la función del ejercicio -->
+            <pre id="res4"></pre> <!-- Identificador (variable) a la que se va a llamar para mostrar el resultado -->
+        </div>
+
+        <!-- Ejercicio 5 -->
+        <div class="ejercicio">
+            <h2>5. Clasificación por temperatura</h2>
+            <input type="number" id="ex5_t" placeholder="Ingrese temperatura (°C)" />
+            <button onclick="mostrarResultado(ejercicio5, 'res5')">Mostrar</button> <!-- Botón para llamar a la función del ejercicio -->
+            <pre id="res5"></pre> <!-- Identificador (variable) a la que se va a llamar para mostrar el resultado -->
+        </div>
+
+        <!-- Ejercicio 6 -->
+        <div class="ejercicio">
+            <h2>6. Bienvenida personalizada</h2>
+            <input type="text" id="ex6_nombre" placeholder="Ingrese su nombre" />
+            <input type="text" id="ex6_genero" placeholder="Género (masculino/femenino)" />
+            <button onclick="mostrarResultado(ejercicio6, 'res6')">Mostrar</button> <!-- Botón para llamar a la función del ejercicio -->
+            <pre id="res6"></pre> <!-- Identificador (variable) a la que se va a llamar para mostrar el resultado -->
+        </div>
+
+        <!-- Ejercicio 7 -->
+        <div class="ejercicio">
+            <h2>7. Saludo según la hora</h2>
+            <input type="number" id="ex7_hora" placeholder="Hora (0-23)" />
+            <button onclick="mostrarResultado(ejercicio7, 'res7')">Mostrar</button> <!-- Botón para llamar a la función del ejercicio -->
+            <pre id="res7"></pre> <!-- Identificador (variable) a la que se va a llamar para mostrar el resultado -->
+        </div>
+
+        <!-- Ejercicio 8 -->
+        <div class="ejercicio">
+            <h2>8. Cálculo de bono</h2>
+            <input type="number" id="ex8_hijos" placeholder="Número de hijos" />
+            <label><input type="checkbox" id="ex8_trabajo" /> Tiene trabajo</label>
+            <button onclick="mostrarResultado(ejercicio8, 'res8')">Mostrar</button> <!-- Botón para llamar a la función del ejercicio -->
+            <pre id="res8"></pre> <!-- Identificador (variable) a la que se va a llamar para mostrar el resultado -->
+        </div>
+
+        <!-- Ejercicio 9 -->
+        <div class="ejercicio">
+            <h2>9. Descuento según tipo de cliente</h2>
+            <input type="text" id="ex9_tipo" placeholder="Tipo de cliente (Normal o VIP)" />
+            <input type="number" id="ex9_gasto" placeholder="Gasto total $" />
+            <button onclick="mostrarResultado(ejercicio9, 'res9')">Mostrar</button> <!-- Botón para llamar a la función del ejercicio -->
+            <pre id="res9"></pre> <!-- Identificador (variable) a la que se va a llamar para mostrar el resultado -->
+        </div>
+
+        <!-- Ejercicio 10 -->
+        <div class="ejercicio">
+            <h2>10. Descuento con membresía</h2>
+            <input type="number" id="ex10_compra" placeholder="Valor de compra $" />
+            <label><input type="checkbox" id="ex10_membresia" /> Tiene membresía</label>
+            <button onclick="mostrarResultado(ejercicio10, 'res10')">Mostrar</button> <!-- Botón para llamar a la función del ejercicio -->
+            <pre id="res10"></pre> <!-- Identificador (variable) a la que se va a llamar para mostrar el resultado -->
+        </div>
+
+        <!-- Botón para regresar al menú principal -->
+        <a href="../menu.html" class="btn-secondary">Regresar</a>
+    </div>
+
+    <!-- Archivo de los ejercicios básicos de condiciones -->
+    <script src="../js/ejercicios_condiciones.js"></script>
+
+    <script>
+        // Muestra el resultado de todos los ejercicios usando la función pasada y el id del <pre>
+        function mostrarResultado(fn, id) {
+            const resultado = fn();
+            document.getElementById(id).textContent = resultado;
+        }
+    </script>
+</body>
+
+</html>
